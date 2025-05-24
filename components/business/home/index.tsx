@@ -10,6 +10,7 @@ import CarouselProductList from "./components/carousel-product-list"
 import ProductList from "./components/product-list"
 import Footer from "@/components/layouts/footer"
 import { MockProduct } from "@/share/mocks/mock-product"
+import Link from "next/link"
 
 interface Props {
     dictionary: LocaleKeys
@@ -37,14 +38,16 @@ function Home(props: Props) {
                 <AppBreadcums routeList={BreadcumsLinkList} dictionary={dictionary} />
 
                 <div>
-                    <Image src="/images/banner.png" width={1440} height={550} alt="banner" className="object-cover" />
+                    <Link href={RouteNames.HOME}>
+                        <Image src="/images/banner.png" width={1440} height={550} alt="banner" className="object-cover" />
+                    </Link>
                     <CarouselProductList dictionary={dictionary} listProduct={MockProduct} />
                 </div>
 
                 <ProductList dictionary={dictionary} />
             </div>
 
-            <Footer dictionary={dictionary} />  
+            <Footer dictionary={dictionary} />
         </div>
     )
 }
