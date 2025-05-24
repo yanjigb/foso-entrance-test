@@ -19,10 +19,10 @@ function CategoryMenu(props: Props) {
                 <AppMobileCategoryMenu dictionary={dictionary} />
 
                 <div className='flex items-center mx-auto md:mx-0 gap-5'>
-                    <Link href="/" className='text-text/primary'>{dictionary['About us']}</Link>
-                    <Link href="/" className='text-text/primary'>{dictionary['Post']}</Link>
-                    <Link href="/" className='text-text/primary'>{dictionary['Catalog']}</Link>
-                    <Link href="/" className='text-text/primary'>{dictionary['Contact']}</Link>
+                    <Link href="/" className='text-text/primary text-xs sm:text-base'>{dictionary['About us']}</Link>
+                    <Link href="/" className='text-text/primary text-xs sm:text-base'>{dictionary['Post']}</Link>
+                    <Link href="/" className='text-text/primary text-xs sm:text-base'>{dictionary['Catalog']}</Link>
+                    <Link href="/" className='text-text/primary text-xs sm:text-base'>{dictionary['Contact']}</Link>
                 </div>
             </div>
 

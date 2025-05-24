@@ -64,7 +64,7 @@ function CarouselProductList(props: Props) {
     }
 
     return (
-        <div className="p-12 bg-brand/600">
+        <div className="p-5 sm:p-12 bg-brand/600">
             <div className="relative">
                 <Carousel {...carouselSettings} ref={carouselRef}>
                     {

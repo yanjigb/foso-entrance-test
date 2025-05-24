@@ -1,5 +1,6 @@
 import { LocaleKeys } from "@/@types/locales"
 import ImageWithText from "@/components/ui/image-with-text"
+import { METADATA } from "@/share/constants/metadata"
 import { Button } from "antd"
 import Image from "next/image"
 import Link from "next/link"
@@ -13,7 +14,7 @@ function Footer(props: Props) {
 
     return (
         <footer className="mt-8">
-            <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8 py-10 section-container">
+            <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-8 py-10 section-container">
                 <ImageWithText imageUrl="/svgs/icon-circle-wallet.svg" title="Miễn phí vận chuyển" description="Với hoá đơn từ 1 triệu" />
                 <ImageWithText imageUrl="/svgs/icon-circle-support.svg" title="Hỗ trợ 24/7" description="Đội ngũ CSKH tận tình sẵn sàng lắng nghe và phục vụ tận tâm" />
                 <ImageWithText imageUrl="/svgs/icon-circle-truck-shipping.svg" title="Giao hàng nhanh 2h" description="Trong vòng bán kính 10km nội thành TP HCM" />
@@ -36,15 +37,15 @@ function Footer(props: Props) {
                 </div>
             </div>
 
-            <div className="section-container py-24 flex flex-col lg:flex-row items-start gap-12 md:gap-[7.2919rem]">
+            <div className="section-container py-24 flex flex-col lg:flex-row items-start gap-12 md:gap-[7.2919rem] bg-[url('/images/bg-footer.jpg')] bg-cover bg-center">
                 <div className="max-w-[35rem] flex flex-col gap-5">
-                    <span className="font-semibold text-xl text-text/primary">Viet Hung Auto Production Trading Joint Stock Company</span>
+                    <span className="font-semibold text-xl text-text/primary">{METADATA.COMPANY_NAME}</span>
 
                     <div className="flex flex-col">
-                        <Link className="md:w-max text-text/secondary" href="tax:0305094228">Tax code: 0305094228</Link>
+                        <Link className="md:w-max text-text/secondary" href="tax:0305094228">Tax code: {METADATA.TAX_CODE}</Link>
                         <Link className="md:w-max text-text/secondary" href="https://www.google.com/maps/place/13 Nghia Thuc, Ward 05, District 5, Ho Chi Minh City, Viet Nam">Address: 13 Nghia Thuc, Ward 05, District 5, Ho Chi Minh City, Viet Nam.</Link>
-                        <Link className="md:w-max text-text/secondary" href="tel:283 760 7607">Phone number: 0283 760 7607</Link>
-                        <span className="md:w-max text-text/secondary">Opening hour: 09:00 - 22:00 from Mon - Fri</span>
+                        <Link className="md:w-max text-text/secondary" href="tel:283 760 7607">Phone number: {METADATA.PHONENUMBER}</Link>
+                        <span className="md:w-max text-text/secondary">Opening hour: {METADATA.OPENING_HOUR}</span>
                     </div>
 
                     <Image src="/svgs/badge-bo-cong-thuong.svg" width={200} height={75.67} alt="bo cong thuong" />
@@ -90,11 +91,11 @@ function Footer(props: Props) {
                             </Button>
 
                             <Button size="large" variant="outlined" className="!py-[0.6875rem] !h-16 !flex !items-center !gap-[1.0625rem] !bg-brand/500">
-                                <Image src="/svgs/icon-ch-play.svg" width={30} height={30} alt="chplay" />
+                                <Image src="/svgs/icon-apple.svg" width={30} height={30} alt="chplay" />
 
                                 <div className="flex flex-col items-start text-white">
-                                    <span>Get it on</span>
-                                    <span className="font-semibold">Google Play Store</span>
+                                    <span>Download from</span>
+                                    <span className="font-semibold">Apple Apple Store</span>
                                 </div>
                             </Button>
                         </div>

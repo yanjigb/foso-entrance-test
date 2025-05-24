@@ -51,7 +51,7 @@ function Header(props: Props) {
                             <Badge count={12} color="#FF5630">
                                 <Image src="/svgs/icon-cart.svg" width={36} height={36} alt="icon vn" />
                             </Badge>
-                            <span className="text-now">{dictionary.Cart}</span>
+                            <span className="text-now hidden sm:inline-block">{dictionary.Cart}</span>
                         </Button>
 
                         <Button onClick={toggleOpenFormLogin} type="text" className="flex items-center gap-2">
@@ -63,6 +63,7 @@ function Header(props: Props) {
             </section>
 
             <CategoryMenu dictionary={dictionary} />
+
             {openSideCart && <AppSideCart dictionary={dictionary} open={openSideCart} onClose={toggleSideCart} />}
             {openFormLogin &&
                 <Modal
