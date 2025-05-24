@@ -1,10 +1,13 @@
 'use client'
 
 import TopSmallBanner from "@/components/ui/top-small-banner"
-import { Badge, Button, Input } from "antd"
+import { Badge, Button, Input, Modal } from "antd"
 import Image from "next/image"
 import CategoryMenu from "./components/category-menu"
 import { LocaleKeys } from "@/@types/locales"
+import { useToggle } from "ahooks"
+import AppSideCart from "@/components/common/app-side-cart"
+import SignInForm from "@/components/forms/sign-in-form"
 
 interface Props {
     dictionary: LocaleKeys
@@ -12,6 +15,8 @@ interface Props {
 
 function Header(props: Props) {
     const { dictionary } = props
+    const [openSideCart, { toggle: toggleSideCart }] = useToggle(false)
+    const [openFormLogin, { toggle: toggleOpenFormLogin }] = useToggle(false)
 
     return (
         <header className="flex flex-col gap-6 w-full">
@@ -37,27 +42,39 @@ function Header(props: Props) {
                     </div>
 
                     <div className="flex items-center justify-between gap-8 flex-shrink-0">
-                        <div className="flex items-center gap-2">
+                        <Button type="text" className="flex items-center gap-2">
                             <Image src="/svgs/icon-circle-vn.svg" width={36} height={36} alt="icon vn" />
                             <span>VI</span>
-                        </div>
+                        </Button>
 
-                        <div className="flex items-center gap-2">
+                        <Button onClick={toggleSideCart} type="text" className="flex items-center gap-2">
                             <Badge count={12} color="#FF5630">
                                 <Image src="/svgs/icon-cart.svg" width={36} height={36} alt="icon vn" />
                             </Badge>
                             <span className="text-now">{dictionary.Cart}</span>
-                        </div>
+                        </Button>
 
-                        <div className="flex items-center gap-2">
+                        <Button onClick={toggleOpenFormLogin} type="text" className="flex items-center gap-2">
                             <Image src="/svgs/icon-user.svg" width={36} height={36} alt="icon vn" />
                             <span>{dictionary.Account}</span>
-                        </div>
+                        </Button>
                     </div>
                 </div>
             </section>
 
             <CategoryMenu dictionary={dictionary} />
+            {openSideCart && <AppSideCart dictionary={dictionary} open={openSideCart} onClose={toggleSideCart} />}
+            {openFormLogin &&
+                <Modal
+                    title={dictionary['Sign in']}
+                    centered
+                    open={openFormLogin}
+                    footer={null}
+                    onCancel={toggleOpenFormLogin}
+                >
+                    <SignInForm dictionary={dictionary} onSubmitForm={toggleOpenFormLogin} />
+                </Modal>
+            }
         </header>
     )
 }

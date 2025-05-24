@@ -38,5 +38,20 @@
     "Enter code": "Nhập mã",
     "Download app": "Download app",
     "Cart": "Giỏ hàng",
-    "Account": "Tài khoản"
+    "Account": "Tài khoản",
+    "Related": "Liên quan",
+    "New": "Mới",
+    "Stand out": "Nổi bật",
+    "Best seller": "Bán chạy",
+    "Best seller product": "Sản phẩm bán chạy",
+    "Wind filter": "Bộ lọc gió",
+    "View all": "Xem tất cả",
+    "Your cart is empty": "Giỏ hàng của bạn đang trống",
+    "Shopping now": "Mua sắm ngay",
+    "Sign in": "Đăng nhập",
+    "Password": "Mật khẩu",
+    "%label% is required": "Trường %label% là bắt buộc",
+    "Enter %label%": "Vui lòng nhập thông tin trường %label%",
+    "%label% must be at least %length% characters long": "Trường %label% phải có ít nhất %length% kí tự",
+    "Email": "Email"
 }

@@ -1,6 +1,6 @@
 import { LocaleKeys } from "@/@types/locales"
 import type { CollapseProps } from 'antd';
-import { Button, Checkbox, Collapse, Space } from 'antd';
+import { Button, Collapse, Space } from 'antd';
 
 interface Props {
     dictionary: LocaleKeys

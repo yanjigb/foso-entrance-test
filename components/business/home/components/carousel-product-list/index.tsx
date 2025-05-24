@@ -1,3 +1,5 @@
+'use client'
+
 import { LocaleKeys } from "@/@types/locales"
 import ProdutCard from "@/components/ui/product-card"
 import { IProduct } from "@/share/types/product"
@@ -5,13 +7,39 @@ import { cn } from "@/share/utils/cn"
 import { Button, Carousel } from "antd"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { useRef } from "react"
+import { Settings } from "react-slick"
 
-
-const carouselSettings = {
+const carouselSettings: Settings = {
     dots: false,
     slidesToShow: 5,
     draggable: true,
     infinite: false,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
 };
 
 interface Props {

@@ -51,22 +51,22 @@ function ProductList(props: Props) {
 
                         <Space className="flex items-center !gap-3 flex-wrap">
                             <ButtonWithIconCheck
-                                text="Lien quan"
+                                text={dictionary.Related}
                                 active={activeOption.LienQuan}
                                 onClick={() => onToggleIsChoosen('LienQuan')}
                             />
                             <ButtonWithIconCheck
-                                text="Ban chay"
+                                text={dictionary['Best seller']}
                                 active={activeOption.BanChay}
                                 onClick={() => onToggleIsChoosen('BanChay')}
                             />
                             <ButtonWithIconCheck
-                                text="Moi nhat"
+                                text={dictionary.New}
                                 active={activeOption.MoiNhat}
                                 onClick={() => onToggleIsChoosen('MoiNhat')}
                             />
                             <ButtonWithIconCheck
-                                text="Noi bat"
+                                text={dictionary["Stand out"]}
                                 active={activeOption.NoiBat}
                                 onClick={() => onToggleIsChoosen('NoiBat')}
                             />

@@ -44,8 +44,8 @@ function AppMobileCategoryMenu(props: Props) {
     ];
 
     return (
-        <div className="w-full md:w-max">
-            <Button className="!py-4 !w-full" onClick={toggleOpenCategoryMenu}>
+        <div className="w-full md:w-max lg:hidden">
+            <Button size="large" className="!w-full" onClick={toggleOpenCategoryMenu}>
                 <div className='flex items-center gap-2 mr-1'>
                     <Image src="/svgs/icon-hamburger-menu.svg" width={18} height={18} alt="menu" />
                     <span className='text-white'>{dictionary['Product category']}</span>
@@ -78,7 +78,7 @@ function AppMobileCategoryMenu(props: Props) {
                                     <div className="flex flex-col gap-2">
                                         {
                                             item.products.map(product => (
-                                                <Link href={product.href!}>{product.title}</Link>
+                                                <Link href={product.href!} key={product.id}>{product.title}</Link>
                                             ))
                                         }
                                     </div>

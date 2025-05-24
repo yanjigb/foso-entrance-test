@@ -46,7 +46,7 @@ function ProdutCard(props: Props) {
                 {
                     salePrice ? (
                         <>
-                            <span className="text-error/dark text-xl leading-6 font-medium">{salePrice} đ</span>
+                            <span className="text-error/dark text-xl leading-6 font-medium">{formatNumber(salePrice)} đ</span>
 
                             <div className="flex items-center gap-[0.625rem]">
                                 <span className="text-text/disabled text-sm line-through leading-6 font-normal">{formatNumber(price)} đ</span>

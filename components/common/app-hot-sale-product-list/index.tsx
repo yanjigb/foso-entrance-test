@@ -15,11 +15,11 @@ function AppHotSaleProductList(props: Props) {
     return (
         <div className='flex flex-col gap-6'>
             <div className='flex items-center justify-between'>
-                <span className='text-2xl font-semibold'>San pham ban chay</span>
+                <span className='text-2xl font-semibold'>{dictionary['Best seller product']}</span>
 
                 <Link href="/" className='flex items-center gap-2'>
                     <span>
-                        Xem tat ca
+                        {dictionary['View all']}
                     </span>
 
                     <Image src="/svgs/icon-double-arrow-right.svg" width={20} height={20} alt='icon double right arrow' />

@@ -38,5 +38,20 @@
     "Enter code": "Enter code",
     "Download app": "Download app",
     "Cart": "Cart",
-    "Account": "Account"
+    "Account": "Account",
+    "Related": "Related",
+    "New": "New",
+    "Stand out": "Stand out",
+    "Best seller": "Best seller",
+    "Best seller product": "Best seller product",
+    "Wind filter": "Wind filter",
+    "View all": "View all",
+    "Your cart is empty": "Your cart is empty",
+    "Shopping now": "Shopping now",
+    "Sign in": "Sign in",
+    "Password": "Password",
+    "%label% is required": "%label% is required",
+    "Enter %label%": "Enter %label%",
+    "%label% must be at least %length% characters long": "%label% must be at least %length% characters long",
+    "Email": "Email"
 }

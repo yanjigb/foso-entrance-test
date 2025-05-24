@@ -77,27 +77,27 @@ function AppMegamenu(props: Props) {
                             <div className='md:min-w-[550px] lg:min-w-[720px] xl:min-w-[1112px] p-4 bg-layout/bg flex flex-col gap-6'>
                                 <div className='grid grid-cols-3 gap-4 pb-7'>
                                     <Link href={RouteNames.HOME}>
-                                        <ImageWithText imageUrl="/images/oil-filter-category-logo.png" title='bo loc gio' widthImage={70} heightImage={70} alt='' />
+                                        <ImageWithText imageUrl="/images/oil-filter-category-logo.png" title={dictionary['Wind filter']} widthImage={70} heightImage={70} alt='' />
                                     </Link>
 
                                     <Link href={RouteNames.HOME}>
-                                        <ImageWithText imageUrl="/images/air-filter-category-logo.png" title='bo loc gio' widthImage={70} heightImage={70} alt='' />
+                                        <ImageWithText imageUrl="/images/air-filter-category-logo.png" title={dictionary['Wind filter']} widthImage={70} heightImage={70} alt='' />
                                     </Link>
 
                                     <Link href={RouteNames.HOME}>
-                                        <ImageWithText imageUrl="/images/air-filter-category-logo.png" title='bo loc gio' widthImage={70} heightImage={70} alt='' />
+                                        <ImageWithText imageUrl="/images/air-filter-category-logo.png" title={dictionary['Wind filter']} widthImage={70} heightImage={70} alt='' />
                                     </Link>
 
                                     <Link href={RouteNames.HOME}>
-                                        <ImageWithText imageUrl="/images/oil-filter-category-logo.png" title='bo loc gio' widthImage={70} heightImage={70} alt='' />
+                                        <ImageWithText imageUrl="/images/oil-filter-category-logo.png" title={dictionary['Wind filter']} widthImage={70} heightImage={70} alt='' />
                                     </Link>
 
                                     <Link href={RouteNames.HOME}>
-                                        <ImageWithText imageUrl="/images/air-filter-category-logo.png" title='bo loc gio' widthImage={70} heightImage={70} alt='' />
+                                        <ImageWithText imageUrl="/images/air-filter-category-logo.png" title={dictionary['Wind filter']} widthImage={70} heightImage={70} alt='' />
                                     </Link>
 
                                     <Link href={RouteNames.HOME}>
-                                        <ImageWithText imageUrl="/images/air-filter-category-logo.png" title='bo loc gio' widthImage={70} heightImage={70} alt='' />
+                                        <ImageWithText imageUrl="/images/air-filter-category-logo.png" title={dictionary['Wind filter']} widthImage={70} heightImage={70} alt='' />
                                     </Link>
                                 </div>
 

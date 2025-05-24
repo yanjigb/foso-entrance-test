@@ -29,7 +29,5 @@ export const themeConfig: ThemeConfig = {
             colorPrimary: '#E6F1FF',
             colorPrimaryActive: '#025FCA',
         },
-        Menu: {
-        }
     },
 }
