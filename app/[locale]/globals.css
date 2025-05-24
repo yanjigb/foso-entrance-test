@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.section-container {
+    @apply container mx-auto max-w-[90rem] px-5;
+}
